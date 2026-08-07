@@ -1,0 +1,27 @@
+{
+  "products": [
+    {
+      "productId": "1",
+      "title": "Classic Denim Jacket",
+      "price": 49.99,
+      "image": "/images/denim.jpg",
+      "qty": 2
+    },
+    {
+      "productId": "2",
+      "title": "Wireless Headphones",
+      "price": 89.99,
+      "image": "/images/headphones.jpg",
+      "qty": 1
+    }
+  ],
+  "shippingAddress": {
+    "fullName": "Test User",
+    "phone": "+91 98765 43210",
+    "email": "testuser-auth@example.com",
+    "address": "123 College Street",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pinCode": "400001"
+  }
+}
