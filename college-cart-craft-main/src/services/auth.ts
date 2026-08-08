@@ -1,7 +1,7 @@
 // Auth API service
 // Connects to the Node.js/Express JWT auth backend
 
-const AUTH_BASE_URL = "http://localhost:5000/api";
+const AUTH_BASE_URL = `${import.meta.env.VITE_API_URL}/api`;
 
 export interface AuthUser {
   id: string;
