@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const app = express();
 const connectDB = require("./config/db");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
@@ -11,15 +12,16 @@ dotenv.config();
 connectDB();
 
 // Initialize Express app
-const app = express();
+
 
 // Middleware
 app.use(cors({
   origin: [
-    "http://localhost:8080",
-    "http://10.88.51.138:8080"
+    "http://localhost:5173",
+    "https://codsoft-tasks-1-1.onrender.com"
   ],
-  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 // Stripe webhook route - MUST be before express.json() so it receives raw body
