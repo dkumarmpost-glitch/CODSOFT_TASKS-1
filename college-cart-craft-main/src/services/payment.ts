@@ -1,7 +1,7 @@
 // Payment API service
 // Connects to the Node.js/Express backend for Stripe Checkout integration
 
-const PAYMENT_BASE_URL = "http://localhost:5000/api/payment";
+const PAYMENT_BASE_URL = `${import.meta.env.VITE_API_URL}/api/payment`;
 
 import { OrderProduct, ShippingAddress, Order } from "@/services/orders";
 
